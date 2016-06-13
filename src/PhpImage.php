@@ -20,7 +20,7 @@ class PhpImage {
 	/*
 	 *
 	 */
-	function __construct($width, $height) {
+	function __construct($width='200', $height='200') {
 		$this -> image_dimention_width = $width;
 		$this -> image_dimention_height = $height;
 		$this -> image_dimention_width_center = $width / 2;
@@ -39,7 +39,7 @@ class PhpImage {
 			case 'transparent' :
 				$color = imagecolorallocatealpha($this -> image, 255, 255, 255, 127);
 				break;
-			case 'white' :
+			case 'white' : 
 				$color = imagecolorallocate($this -> image, 255, 255, 255);
 				break;
 			case 'black' :
@@ -115,7 +115,9 @@ class PhpImage {
 	}
 
 	function textcolor($color = 'black') {
-		$color=strtolower($color);
+		if(!is_array($color))
+			$color=@strtolower($color);
+		
 		if ($color == 'black') {
 			$color = imagecolorallocate($this -> image, 0, 0, 0);
 		}
@@ -134,10 +136,13 @@ class PhpImage {
 		elseif ($color == 'blue') {
 			$color = imagecolorallocate($this -> image, 0, 0, 255);
 		}
+		elseif (is_array($color)) {
+			$color = imagecolorallocate($this -> image, $color['red'], $color['green'], $color['blue']);
+		}
 		return $color;
 	}
 
-	function addtext($string, $color, $x, $y, $align = 'left') {
+	function addtext($string, $color, $x, $y, $align = 'left' , $angle=0) {
 		$align=strtolower($align);
 		if ($align == 'center') {
 			$string_len = strlen($string);
@@ -146,7 +151,7 @@ class PhpImage {
 			$x = $this -> image_dimention_width_center - $string_len;
 		}
 		$color = $this -> textcolor($color);
-		imagettftext($this -> image, $this -> font_size, 0, $x, $y, $color, $this -> font_file, $string);
+		imagettftext($this -> image, $this -> font_size, $angle, $x, $y, $color, $this -> font_file, $string);
 	}
 
 	function setlargetextarea($string) {
