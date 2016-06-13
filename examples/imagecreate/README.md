@@ -1,4 +1,4 @@
-# Create Image And Captcha Using Php 
+# Create Image Using Php 
 
 PHP Image Library with features like Text or Image Captcha, Image Align , Text Justify , Make Transparent Image , Auto height adjust according to text and many more we will be updating many more changes.
 
@@ -28,10 +28,6 @@ Currently This Script only support 6 Colors : Red,Blue,Green,White,Black,Yellow
     $image -> display(); //To Display Image
     
     $image -> savepng('FILE_NAME'); 
-	
-### Steps To Create Captcha
-
-	Check the Example Directory for sample
 
 ### Get the code
 
@@ -41,6 +37,21 @@ Currently This Script only support 6 Colors : Red,Blue,Green,White,Black,Yellow
     
     Ramith Nambiar @ramith27
     
-### Updates
-    13 June 2016 : Uploaded Version 0.1
+### Example To Create Image
+    $string = "PHP Image Library with features like Text or Image Align , Text Justify , Make Transparent Image , Auto height adjust according to text and many more we will be updating many more changes.";
+    $img = new PhpImage(500, 200);
+    $img -> setfont('font.ttf', 10);
+    $img -> setlargetextarea($string);
+    $img -> draw();
+    $img -> fillcolor('WHITE');
+    $img -> addimagejpeg('photo.jpg', 'RIGHT', 'TOP');
+    $img -> addtext('@ramith27/phpimage','black',0,40,'center');
+    $img -> addtext('Create Image Using Php','black',0,70,'center');
+    $img -> addtextjustified(0, 20, 100,'black',$string);
+    $img -> display();
+    $img -> savepng('image');
+    
+### Output 
+![alt tag](https://camo.githubusercontent.com/17bc80d1b360c8cfb2a176f1ffc0a67ee49e4ffe/687474703a2f2f7333332e706f7374696d672e6f72672f636a7135647a786a332f746573742e706e67)
+
   
