@@ -23,3 +23,7 @@ PHP Image Library with features like Text or Image Align , Text Justify , Make T
 ### Get the code
 
     git clone https://github.com/ramith27/phpimage.git
+    
+### Script Developed By
+    
+    Ramith Nambiar @ramith27
