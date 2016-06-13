@@ -34,6 +34,7 @@ class PhpImage {
 	}
 
 	function fillcolor($color) {
+		$color=strtolower($color);
 		switch ($color) {
 			case 'transparent' :
 				$color = imagecolorallocatealpha($this -> image, 255, 255, 255, 127);
@@ -90,6 +91,7 @@ class PhpImage {
 	}
 
 	function textcolor($color = 'black') {
+		$color=strtolower($color);
 		if ($color == 'black') {
 			$color = imagecolorallocate($this -> image, 0, 0, 0);
 		}
