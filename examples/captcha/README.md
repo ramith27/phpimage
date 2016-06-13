@@ -2,12 +2,6 @@
 
 PHP Image Library with features like Text or Image Captcha, Image Align , Text Justify , Make Transparent Image , Auto height adjust according to text and many more we will be updating many more changes.
 
-### Steps To Create Image
-
-	
-### Steps To Create Captcha
-
-
 ### Example Of Captcha
 	##### Html File
 	<html>
@@ -39,7 +33,7 @@ PHP Image Library with features like Text or Image Captcha, Image Align , Text J
     
 	
 ### Output 
-![alt tag](https://camo.githubusercontent.com/17bc80d1b360c8cfb2a176f1ffc0a67ee49e4ffe/687474703a2f2f7333332e706f7374696d672e6f72672f636a7135647a786a332f746573742e706e67)
+![alt tag](http://bls.we4u.pw/captcha.png)
 
 
 ### Get the code
