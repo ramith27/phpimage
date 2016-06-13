@@ -56,4 +56,4 @@ Currently This Script only support 6 Colors : Red,Blue,Green,White,Black,Yellow
     $img -> savepng('image');
     
 ### Output 
-![alt tag](http://s33.postimg.org/cjq5dzxj3/test.png)
+![alt tag](https://camo.githubusercontent.com/17bc80d1b360c8cfb2a176f1ffc0a67ee49e4ffe/687474703a2f2f7333332e706f7374696d672e6f72672f636a7135647a786a332f746573742e706e67)
