@@ -2,10 +2,10 @@
 
 PHP Image Library with features like Text or Image Align , Text Justify , Make Transparent Image , Auto height adjust according to text and many more we will be updating many more changes.
 
-#### Note
+### Note
 Currently This Script only support 6 Colors : Red,Blue,Green,White,Black,Yellow
 
-#### Usage
+### Usage
 
     include 'src/PhpImage.php';
 
@@ -29,15 +29,15 @@ Currently This Script only support 6 Colors : Red,Blue,Green,White,Black,Yellow
     
     $image -> savepng('FILE_NAME'); 
 
-#### Get the code
+### Get the code
 
     git clone https://github.com/ramith27/phpimage.git
     
-#### Script Developed By
+### Script Developed By
     
     Ramith Nambiar @ramith27
     
-#### Updates
+### Updates
     13 June 2016 : Uploaded Version 0.1
     
 ###### Example
