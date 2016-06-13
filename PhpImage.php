@@ -64,6 +64,8 @@ class PhpImage {
 	}
 
 	function addimage($pngfilename, $position_x, $position_y, $width = 0, $height = 0) {
+		$position_x=strtolower($position_x);
+		$position_y=strtolower($position_y);
 		list($actualwidth, $actualheight) = getimagesize($pngfilename);
 		if ($width == 0)
 			list($width, $height) = getimagesize($pngfilename);
@@ -114,6 +116,7 @@ class PhpImage {
 	}
 
 	function addtext($string, $color, $x, $y, $align = 'left') {
+		$align=strtolower($align);
 		if ($align == 'center') {
 			$string_len = strlen($string);
 			$string_len = $string_len * ($this -> font_size * 0.75);
@@ -141,7 +144,7 @@ class PhpImage {
 
 	function addtextjustified($angle, $left, $top, $color, $text, $minspacing = 3, $linespacing = 1) {
 		$color = $this -> textcolor($color);
-		$max_width = $this -> image_dimention_width-40;
+		$max_width = $this -> image_dimention_width-($left*2);
 		$font = $this -> font_file;
 		$size = $this -> font_size;
 		$image = $this -> image;
