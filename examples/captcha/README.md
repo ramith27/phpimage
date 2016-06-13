@@ -17,7 +17,7 @@ PHP Image Library with features like Text or Image Captcha, Image Align , Text J
 		</body>
 	</html>
 	
-###### Php File
+###### Php File 
 	<?php
 		session_start();
 		if($_POST['input'] == $_SESSION['captcha']){
