@@ -7,7 +7,7 @@ Currently This Script only support 6 Colors : Red,Blue,Green,White,Black,Yellow
 
 ### Usage
 
-    include 'PhpImage.php';
+    include 'src/PhpImage.php';
 
     $image = new PhpImage(WIDTH,HEIGHT);
     
