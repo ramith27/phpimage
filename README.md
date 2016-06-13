@@ -35,3 +35,6 @@ Currently This Script only support 6 Colors : Red,Blue,Green,White,Black,Yellow
 ### Script Developed By
     
     Ramith Nambiar @ramith27
+    
+### Updates
+    13 June 2016 : Uploaded Version 0.1
