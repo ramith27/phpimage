@@ -193,6 +193,14 @@ class PhpImage {
 	function display() {
 		header("Content-type: image/png");
 		imagepng($this -> image);
+	}
+	
+	function savepng($name){
+		$save = strtolower($name) .".png";
+		imagepng($this -> image, $save);
+	}
+	
+	function __destruct(){
 		imagedestroy($this -> image);
 	}
 }
