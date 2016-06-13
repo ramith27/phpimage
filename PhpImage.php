@@ -4,10 +4,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+
 /**
- * Scripted By Ramith Nambiar @ramith27
+ * Scripted By Ramith Nambiar
  * 13 June 2016
- * Version 0.1
  */
  
 class PhpImage {
@@ -63,7 +63,7 @@ class PhpImage {
 		imagefill($this -> image, 0, 0, $color);
 	}
 
-	function addimage($pngfilename, $position_x, $position_y, $width = 0, $height = 0) {
+	function addimagepng($pngfilename, $position_x, $position_y, $width = 0, $height = 0) {
 		$position_x=strtolower($position_x);
 		$position_y=strtolower($position_y);
 		list($actualwidth, $actualheight) = getimagesize($pngfilename);
@@ -75,7 +75,6 @@ class PhpImage {
 			$position_x=$this -> image_dimention_width_center-($width/2);
 		elseif($position_x=='right')
 			$position_x=$this -> image_dimention_width-($width);
-		
 		if($position_y=='top')
 			$position_y=0;
 		elseif($position_y=='center')
@@ -83,6 +82,29 @@ class PhpImage {
 		elseif($position_y=='bottom')
 			$position_y=$this -> image_dimention_height-($height);
 		$image = imagecreatefrompng($pngfilename);
+		imagecopyresampled($this -> image, $image, $position_x, $position_y, 0, 0, $width, $height, $actualwidth, $actualheight);
+		imagealphablending($this -> image, true);
+	}
+	
+	function addimagejpeg($pngfilename, $position_x, $position_y, $width = 0, $height = 0) {
+		$position_x=strtolower($position_x);
+		$position_y=strtolower($position_y);
+		list($actualwidth, $actualheight) = getimagesize($pngfilename);
+		if ($width == 0)
+			list($width, $height) = getimagesize($pngfilename);
+		if($position_x=='left')
+			$position_x=0;
+		elseif($position_x=='center')
+			$position_x=$this -> image_dimention_width_center-($width/2);
+		elseif($position_x=='right')
+			$position_x=$this -> image_dimention_width-($width);
+		if($position_y=='top')
+			$position_y=0;
+		elseif($position_y=='center')
+			$position_y=$this -> image_dimention_height_center-($height/2);
+		elseif($position_y=='bottom')
+			$position_y=$this -> image_dimention_height-($height);
+		$image = imagecreatefromjpeg($pngfilename);
 		imagecopyresampled($this -> image, $image, $position_x, $position_y, 0, 0, $width, $height, $actualwidth, $actualheight);
 		imagealphablending($this -> image, true);
 	}
