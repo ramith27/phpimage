@@ -1,37 +1,46 @@
-# Create Image And Captcha Using Php 
+# Create  Captcha Using Php 
 
 PHP Image Library with features like Text or Image Captcha, Image Align , Text Justify , Make Transparent Image , Auto height adjust according to text and many more we will be updating many more changes.
 
-### Note
-Currently This Script only support 6 Colors : Red,Blue,Green,White,Black,Yellow
-
 ### Steps To Create Image
 
-    include 'src/PhpImage.php';
-
-    $image = new PhpImage(WIDTH,HEIGHT);
-    
-    $image -> draw();
-    
-    $image -> fillcolor('COLOR'); //If You want Transparent Image $image -> fillcolor('TRANSPARENT');
-    
-    $image -> setfont('FONT_FILE_PATH', 'FONT_SIZE');
-    
-    $image -> addimagepng('IMAGE_PATH', 'ALIGN_HORIZONTAL', 'ALIGN_VERTICAL'); //(LEFT/CENTER/RIGHT,TOP/CENTER/BOTTOM)
-    
-    $image -> addimagejpeg('IMAGE_PATH', 'ALIGN_HORIZONTAL', 'ALIGN_VERTICAL'); //(LEFT/CENTER/RIGHT,TOP/CENTER/BOTTOM)
-    
-    $image -> addtext('YOUR_TEXT','COLOR','X_POSITION','Y_POSITION','ALIGN');  //ALIGN = CENTER/LEFT
-    
-    $image -> addtextjustified('ANGLE', 'PADDING_LEFT_RIGHT', 'PADDING_TOP','COLOR','YOUR_STRING');
-    
-    $image -> display(); //To Display Image
-    
-    $image -> savepng('FILE_NAME'); 
 	
 ### Steps To Create Captcha
 
-	Check the Example Directory for sample
+
+### Example To Create Image
+##### Html File
+	<html>
+		<head>
+		</head>
+		<body>
+			<h1>Captcha Example</h1>
+			<form method="post" action="CaptchaVerifyExample.php"><br>
+				<img src="../../src/PhpImageCaptcha.php" alt="Captcha"><br>
+				<input type="text" name="input" />
+				<input type="submit" />
+			</form>
+		</body>
+	</html>
+	
+##### Php File
+	<?php
+		session_start();
+		if($_POST['input'] == $_SESSION['captcha']){
+			$_SESSION['captcha']="";
+			echo "success";
+			/*Your Code Here*/
+		}
+		else {
+			echo "error";
+			$_SESSION['captcha']="";
+		}
+	?>
+    
+	
+### Output 
+![alt tag](https://camo.githubusercontent.com/17bc80d1b360c8cfb2a176f1ffc0a67ee49e4ffe/687474703a2f2f7333332e706f7374696d672e6f72672f636a7135647a786a332f746573742e706e67)
+
 
 ### Get the code
 
@@ -40,7 +49,5 @@ Currently This Script only support 6 Colors : Red,Blue,Green,White,Black,Yellow
 ### Script Developed By
     
     Ramith Nambiar @ramith27
-    
-### Updates
-    13 June 2016 : Uploaded Version 0.1
+
   
