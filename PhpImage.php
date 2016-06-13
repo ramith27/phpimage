@@ -44,6 +44,18 @@ class PhpImage {
 			case 'black' :
 				$color = imagecolorallocate($this -> image, 0, 0, 0);
 				break;
+			case 'red' :
+				$color = imagecolorallocate($this -> image, 255, 0, 0);
+				break;
+			case 'yellow' :
+				$color = imagecolorallocate($this -> image, 255, 255, 0);
+				break;
+			case 'blue' :
+				$color = imagecolorallocate($this -> image, 0, 0, 255);
+				break;
+			case 'blue' :
+				$color = imagecolorallocate($this -> image, 0, 255, 0);
+				break;
 			default :
 				break;
 		}
@@ -78,14 +90,23 @@ class PhpImage {
 	}
 
 	function textcolor($color = 'black') {
-		if ($color == 'lime') {
-			$color = imagecolorallocate($this -> image, 204, 255, 51);
-		}
-		if ($color == 'yellow') {
-			$color = imagecolorallocate($this -> image, 255, 255, 0);
-		}
 		if ($color == 'black') {
 			$color = imagecolorallocate($this -> image, 0, 0, 0);
+		}
+		elseif ($color == 'white') {
+			$color = imagecolorallocate($this -> image, 255, 255, 255);
+		}
+		elseif ($color == 'yellow') {
+			$color = imagecolorallocate($this -> image, 255, 255, 0);
+		}
+		elseif ($color == 'red') {
+			$color = imagecolorallocate($this -> image, 255, 0, 0);
+		}
+		elseif ($color == 'green') {
+			$color = imagecolorallocate($this -> image, 0, 255, 0);
+		}
+		elseif ($color == 'blue') {
+			$color = imagecolorallocate($this -> image, 0, 0, 255);
 		}
 		return $color;
 	}
