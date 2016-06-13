@@ -17,10 +17,9 @@ Currently This Script only support 6 Colors : Red,Blue,Green,White,Black,Yellow
     
     $image -> setfont('FONT_FILE_PATH', 'FONT_SIZE');
     
-    $image -> addimagepng('IMAGE_PATH', 'ALIGN_HORIZONTAL', 'ALIGN_VERTICAL');
+    $image -> addimagepng('IMAGE_PATH', 'ALIGN_HORIZONTAL', 'ALIGN_VERTICAL'); //(LEFT/CENTER/RIGHT,TOP/CENTER/BOTTOM)
     
-    $image -> addimagejpeg('IMAGE_PATH', 'ALIGN_HORIZONTAL', 'ALIGN_VERTICAL');  
-    // ALIGN_HORIZONTAL=LEFT/CENTER/RIGHT & ALIGN_VERTICAL = TOP/CENTER/BOTTOM
+    $image -> addimagejpeg('IMAGE_PATH', 'ALIGN_HORIZONTAL', 'ALIGN_VERTICAL'); //(LEFT/CENTER/RIGHT,TOP/CENTER/BOTTOM)
     
     $image -> addtext('YOUR_TEXT','COLOR','X_POSITION','Y_POSITION','ALIGN');  //ALIGN = CENTER/LEFT
     
