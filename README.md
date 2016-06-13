@@ -4,7 +4,7 @@ PHP Image Library with features like Text or Image Align , Text Justify , Make T
 
 ### Usage
 
-include 'PhpImage.php';
+    include 'PhpImage.php';
 
     $image = new PhpImage(WIDTH,HEIGHT);
     
