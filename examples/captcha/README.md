@@ -32,9 +32,7 @@ PHP Image Library with features like Text or Image Captcha, Image Align , Text J
 	?>
     
 	
-### Output 
-![alt tag](https://camo.githubusercontent.com/fb2d1a8ea1d3265860146ea18cac4af3aa0c53ae/687474703a2f2f626c732e776534752e70772f636170746368612e706e67)
- 
+
 
 ### Get the code
 
